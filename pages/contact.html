@@ -1,0 +1,201 @@
++
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <title>Document</title>
+</head>
+
+<body>
+     <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <span>
+          <img src="../images/logo.png" class="mb-1" alt="" />
+        </span>
+        MedCab</a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav d-flex align-items-center me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Our Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Ambulances</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Hospitals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Join Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blogs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+          <li class="nav-ctn-book">
+            <a
+              class="nav-link rounded bg-white nav-booknow me-lg-2 mb-2 mb-lg-0 px-3 py-1"
+              href="#"
+              tabindex="-1"
+              aria-disabled="true"
+              >Book Now</a
+            >
+          </li>
+          <li class="nav-ctn-login text-white">
+            <button
+              type="button"
+              class="btn btn-primary nav-link border border-white rounded px-4 py-1"
+              data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop"
+              href="#"
+              tabindex="-1"
+              aria-disabled="true"
+            >
+              Login
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+   </nav> 
+    <!-- Contact Section start -->
+    <section class="contact-section section-padding px-4" style="margin-bottom:-30px;">
+        <div class="container-fluid">
+            <div class="contact-us row gy-4">
+                <div class="col-lg-6 p-0 ">
+                    <div class="contact-left-img h-100 d-flex-center p-2">
+                        <img src="../images/frame31802.png" alt="Contact Us banner" class="w-100">
+                    </div>
+                </div>
+                <div class="col-lg-6 p-0">
+                    <div class="contact-form px-3">
+                        <h1 class="form-caption">
+                            Get in Touch
+                        </h1>
+                        <form action="{{URL::Route('ContactUs.Save')}}" method="post" id="contact-form">
+                            <div class="form-mess mb-4">
+                                <h3 class="text-success">
+
+                                </h3>
+                                <h3 class="text-success">
+
+                                </h3>
+                            </div>
+                            <div class="row" style="row-gap:20px;">
+                                <div class="col-6">
+                                    <div class="">
+                                        <label class="form-label">First Name*</label>
+                                        <input type="text" pattern="[a-zA-Z]+" oninput="inputCharacterOnly(this)"
+                                            name="first-name" class="form-control" value="">
+                                        <span class="errorMess form-text text-danger">
+
+
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="">
+                                        <label class="form-label">Last Name*</label>
+                                        <input type="text" pattern="[a-zA-Z]+" name="last-name"
+                                            oninput="inputCharacterOnly(this)" class="form-control" value="">
+                                        <span class="errorMess form-text text-danger">
+
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="">
+                                        <label class="form-label">Phone Number*</label>
+                                        <input type="number" name="mob_no" maxlength="10" class="form-control"
+                                            value="{{ old('mob_no') }}"
+                                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                                        <span class="errorMess form-text text-danger">
+
+
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="">
+                                        <label class="form-label">Email Address*</label>
+                                        <input type="email" name="email" class="form-control" value=""
+                                            style="text-transform:lowercase;">
+                                        <span class="errorMess form-text text-danger">
+
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="">
+                                        <label class="form-label">Message</label>
+                                        <textarea rows="3" name="message" class="form-control text-left"
+                                            style="text-align-last:auto;"></textarea>
+                                        <span class="errorMess form-text text-danger">
+
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="">
+                                        <button type="submit" class="text-white form-control medcab-btn"
+                                            id="contact-form-submit-btn">Submit</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="contact-loc row gy-4">
+            <div class="col-lg-6 p-0 ">
+                <div class="contact-left-img h-70 d-flex-center p-4">
+                    <img src="../images/frame32703.png" width="100%" alt="Contact Us banner">
+                </div>
+            </div>
+            <div class="col-lg-6 p-0">
+                <div class="link px-3">
+                    <a class="d-inline-block mb-3 mt-3" href="default.asp"><img src="../images/frame72 (1).png" alt="address"
+                            href="mailto:webmaster@example.com">Third Floor Rajsha Tower Vibhuti Khand Gomti Nagar,
+                        Lucknow, Uttar Pradesh 226010</a><br>
+                    <a class="d-inline-block mb-3" href="default.asp"><img src="../images/frame72 (2).png" alt="address"
+                            href="mailto:webmaster@example.com">+91 8755672479</a><br>
+                    <a class="d-inline-block mb-3" href="default.asp"><img src="../images/frame72 (3).png" alt="address"
+                            href="mailto:webmaster@example.com">info@medcabprivaelimited.com</a><br>
+                </div>
+            </div>
+
+
+        </div>
+        </section>
+    </section>
+    <!-- Contact Section end -->

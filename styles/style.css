@@ -1,0 +1,120 @@
+/* nav bar*/
+:root {
+  --primary-clr: #c4364e;
+  --secondary-clr: #159d89;
+  --white-clr: #fff;
+  --nav-link-clr: #f89e9e;
+  --dark-grey-clr: #252527;
+  --border-light-clr: #e2e2e2;
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+html {
+  font-size: 55.5%;
+}
+.navbar {
+  padding: 0.5rem 4rem;
+  background: #c4364e;
+  color: var(--nav-link);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.navbar-nav {
+  margin-left: auto;
+}
+.navbar .nav-link {
+  color: var(--nav-link-clr);
+  margin: 0 0.5rem;
+}
+.navbar .nav-link.active {
+  color: var(--white-clr);
+}
+.navbar-brand {
+  font-size: clamp(2rem, 2vw, 2.5rem);
+}
+.navbar-brand,
+.navbar-brand:hover,
+.nav-item:hover .nav-link {
+  color: var(--white-clr);
+}
+.navbar-collapse {
+  flex-grow: 0;
+}
+.navbar .nav-booknow {
+  color: var(--primary-clr);
+}
+.nav-ctn-login .nav-link {
+  color: var(--white-clr);
+  margin: 0 0.4rem;
+}
+.nav-ctn-login:hover a {
+  background: var(--white-clr);
+  color: var(--primary-clr);
+}
+
+@media all and (max-width: 1100px) {
+  .navbar {
+    font-size: 1.25rem;
+  }
+}
+
+@media all and (max-width: 780px) {
+}
+
+@media all and (max-width: 480px) {
+  .navbar {
+    padding: 0.5rem  1rem;
+}
+}
+
+/* Nav Bar closed*/
+.contact-us{
+    padding-top:40px ;
+    padding-bottom:10px ;
+  }
+  .contact-img{
+    background: #F89E9E;
+   
+
+  }
+  .contact-form{
+   /* padding-left: 40px; */
+    width: 100%;
+    justify-content: start;
+    align-items: center;
+    /* margin: 16px; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  
+  }
+  .contact-form>h1{
+    font-family: var(--lato-font);
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 55px;
+    color: #41404D;
+    margin-bottom: 10px;
+    margin-right: auto;
+  }
+  .contact-form form input,.contact-form form textarea{
+    background-color: #F2F2F2!important;
+  }
+  .contact-form>.form-control:focus{
+    background-color: white!important;
+  }
+  #contact-form-submit-btn{
+    background-color: #C5354F;
+    
+  }
+  .contact-loc{
+padding-top:10px ;
+    padding-bottom:10px ;
+  }
+
+  
+.link a {
+  text-decoration: none;
+  color: black;
+}
